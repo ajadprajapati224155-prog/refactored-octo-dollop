@@ -50,7 +50,7 @@ LOG = logging.getLogger(__name__)
 premium_data = {}
 
 # Define the owner ID
-owner_id = 7834875502
+owner_id = 6824252172
 
 # Initialize bot with environment variables
 bot = Client(
@@ -65,7 +65,7 @@ bot = Client(
 premium_data = {}
 
 # Replace with your Telegram channel ID where you want to send logs
-CHANNEL_ID = "-1002578737957"
+CHANNEL_ID = "-1003966488644"
 
 
 #--------------------my plan ---------------------------------------------------------------
