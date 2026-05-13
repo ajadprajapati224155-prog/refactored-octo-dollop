@@ -66,6 +66,7 @@ premium_data = {}
 
 # Define the owner ID
 owner_id = 6824252172
+FORCE_SUB_CHANNEL = "ssc_exam_helper"
 
 # Initialize bot with environment variables
 bot = Client(
@@ -80,7 +81,7 @@ bot = Client(
 premium_data = {}
 
 # Replace with your Telegram channel ID where you want to send logs
-CHANNEL_ID = "-1003966488644"
+CHANNEL_ID = "-1002718563674"
 
 
 #--------------------my plan ---------------------------------------------------------------
@@ -164,7 +165,7 @@ async def give_premium_cmd_handler(client, message: Message):
                 )
                 
                 await client.send_message(
-                    chat_id=-1002578737957,  # Replace with your actual channel ID
+                    chat_id=-1002718563674,  # Replace with your actual channel ID
                     text=f"#Added_Premium\n\n👤 ᴜꜱᴇʀ : {user.mention}\n⚡ ᴜꜱᴇʀ ɪᴅ : <code>{user_id}</code>\n⏰ ᴘʀᴇᴍɪᴜᴍ ᴀᴄᴄᴇꜱꜱ : <code>{time}</code>\n\n⏳ ᴊᴏɪɴɪɴɢ ᴅᴀᴛᴇ : {current_time}\n\n⌛️ ᴇxᴘɪʀʏ ᴅᴀᴛᴇ : {expiry_str_in_ist}",
                     disable_web_page_preview=True
                 )
@@ -263,7 +264,7 @@ async def check_expiry():
 
                 # Notify bot owner
                 await app.send_message(
-                    chat_id=7834875502,
+                    chat_id=6824252172,
                     text=f"Premium plan expired for User ID: {user_id}\nExpiry time: {expiry_str_in_ist}"
                 )
 
@@ -343,7 +344,7 @@ async def start_command(bot, message):
         ),
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("Contact Me", url="https://t.me/Final_piece")]
+                [InlineKeyboardButton("Contact Me", url="https://t.me/ssc_exam_helper")]
             ]
         )
     )
