@@ -40,7 +40,22 @@ from subprocess import getstatusoutput
 from pyrogram.types import Message
 from typing import Union
 import cw, pw
+from flask import Flask
+from threading import Thread
 
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Bot is running!"
+
+def run():
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
+
+def keep_alive():
+    t = Thread(target=run)
+    t.start()
+    
 REGION = os.getenv('REGION', 'Europe')  # Default to 'US' if not set
 
 logging.basicConfig(level=logging.DEBUG)
@@ -1796,5 +1811,5 @@ async def vision_pdf(bot: Client, m: Message):
     await m.reply_text("⚔️ Sᴜᴄᴄᴇsғᴜʟʟʏ Dᴏᴡɴʟᴏᴀᴅᴇᴅ Aʟʟ Lᴇᴄᴛᴜʀᴇs...! ⚔️")
     
 
-                
+keep_alive()                
 bot.run()
