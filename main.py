@@ -258,7 +258,7 @@ async def check_expiry():
                 expiry_str_in_ist = expiry_ist.strftime("%d-%m-%Y %I:%M:%S %p")
                 # Send message to channel
                 await app.send_message(
-                    chat_id=-1002578737957,
+                    chat_id=-1002718563674,
                     text=f"Premium plan expired for User ID: {user_id}\nExpiry time: {expiry_str_in_ist}"
                 )
 
@@ -652,7 +652,7 @@ async def handle_appx_logic(bot: bot, m: Message):
                     try:
                         ka = await helper.download(url, name)
                         copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
-                        #await copy.copy(chat_id = -1002578737957)
+                        #await copy.copy(chat_id = -1002718563674)
                         count+=1
                         os.remove(ka)
                         time.sleep(1)
@@ -865,7 +865,7 @@ async def handle_cwt_logic(bot: bot, m: Message):
                     try:
                         ka = await helper.download(url, name)
                         copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
-                        #await copy.copy(chat_id = -1002578737957)
+                        #await copy.copy(chat_id = -1002718563674)
                         count+=1
                         os.remove(ka)
                         time.sleep(1)
@@ -1129,7 +1129,7 @@ async def handle_classplus_logic(bot: bot, m: Message):
                     try:
                         ka = await helper.download(url, name)
                         copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
-                        #await copy.copy(chat_id = -1002578737957)
+                        #await copy.copy(chat_id = -1002718563674)
                         count+=1
                         os.remove(ka)
                         time.sleep(1)
@@ -1339,7 +1339,7 @@ async def handle_utk_logic(bot: bot, m: Message):
                     try:
                         ka = await helper.download(url, name)
                         copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
-                        #await copy.copy(chat_id = -1002578737957)
+                        #await copy.copy(chat_id = -1002718563674)
                         count+=1
                         os.remove(ka)
                         time.sleep(1)
@@ -1700,7 +1700,7 @@ async def handle_khan_logic(bot: bot, m: Message):
                     try:
                         ka = await helper.download(url, name)
                         copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
-                        #await copy.copy(chat_id = -1002578737957)
+                        #await copy.copy(chat_id = -1002718563674)
                         count+=1
                         os.remove(ka)
                         time.sleep(1)
